@@ -3,110 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Webpage</title>
+    <title>Welcome to My 90s Page!</title>
     <style>
         body {
+            background-color: #f0f0f0;
+            color: #000;
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #00FFFF; /* Cyan background */
-            color: #000000; /* Black text */
-            margin: 0;
-            padding: 0;
             text-align: center;
-            background-image: url('https://www.pexels.com/photo/multicolored-abstract-painting-606972/');
-            background-size: cover;
         }
         h1 {
-            color: #FF00FF; /* Magenta text */
+            color: #ff00ff;
+            font-size: 3em;
+        }
+        h2 {
+            color: #00ff00;
             font-size: 2.5em;
-            text-shadow: 2px 2px 5px #FF00FF;
             margin-top: 20px;
         }
         p {
-            font-size: 1.2em;
-            margin: 20px;
-            line-height: 1.5;
+            font-size: 1.5em;
         }
-        .content {
-            background-color: #FFFFFF; /* White background for content */
-            border: 2px solid #0000FF; /* Blue border */
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #e0e0e0;
             padding: 20px;
+            border: 2px solid #ff00ff;
             border-radius: 15px;
-            box-shadow: 5px 5px 10px #FF00FF;
-            display: inline-block;
-            margin-top: 20px;
+            box-shadow: 5px 5px 10px #888888;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #0000ff;
+            border-radius: 10px;
+            background-color: #ffffff;
         }
         a {
-            color: #0000FF;
+            color: #0000ff;
             text-decoration: underline;
         }
         a:hover {
-            color: #FF0000;
-            text-decoration: none;
+            color: #ff0000;
         }
-        .hidden-content {
-            display: none;
+        .blink {
+            animation: blink 1s step-start infinite;
         }
-        .hidden-content img {
-            width: 100%;
-            max-width: 400px;
-            border: 2px solid #FF00FF;
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #ff00ff;
             border-radius: 10px;
+            margin-top: 10px;
         }
-        .hidden-content video {
-            width: 100%;
-            max-width: 400px;
-            border: 2px solid #FF00FF;
-            border-radius: 10px;
+        hr {
+            border: 0;
+            height: 2px;
+            background: #ff00ff;
+            margin: 20px 0;
         }
-        .cat-mode {
-            background-color: #FFC0CB; /* Light pink background */
-            color: #000000; /* Black text */
+        .visitor-counter {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #ff0000;
         }
-        .cat-mode h1 {
-            color: #FF4500; /* Orange-red text */
-        }
-        .cat-mode a {
-            color: #FF69B4; /* Hot pink links */
-        }
-        .cat-mode .content {
-            background-color: #FFFFFF; /* White background for content */
-            box-shadow: 5px 5px 10px #FF4500;
-        }
-        .cat-mode .hidden-content img,
-        .cat-mode .hidden-content video {
-            border-color: #FF4500; /* Orange-red border */
+        marquee {
+            color: #ff00ff;
+            font-size: 2em;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Welcome to My Retro Webpage</h1>
-        <p>Hello, my name is <strong>[LOLguy89]</strong>. I am a [Your Title/Profession].</p>
-        <p>Click on the following secret links to discover hidden content:</p>
-        <ul>
-            <li><a href="#" onclick="showContent('photo')">Secret Photo</a></li>
-            <li><a href="#" onclick="showContent('gif')">Secret GIF</a></li>
-            <li><a href="#" onclick="toggleCatMode()">Toggle Cat Mode</a></li>
-        </ul>
+    <div class="container">
+        <h1>Welcome to My Totally Rad 90s Page!</h1>
+        
+        <marquee>Welcome to the most awesome 90s website!</marquee>
 
-        <!-- Hidden Content -->
-        <div id="photo" class="hidden-content">
-            <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Secret Photo">
+        <div class="visitor-counter">
+            <p>Visitor Count: <span id="visitorCount">0</span></p>
         </div>
-        <div id="gif" class="hidden-content">
-            <img src="https://media.giphy.com/media/3o7TKY9mB2U4NTb2NO/giphy.gif" alt="Secret GIF">
+
+        <p>This page is a tribute to some of the most awesome tech from the 1990s. Check out these amazing pieces of technology:</p>
+
+        <!-- Commodore 64 Section -->
+        <div class="section">
+            <h2>Commodore 64</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Commodore_64.jpg" alt="Commodore 64">
+            <p>The Commodore 64, released in 1982, was one of the most popular home computers of the 1980s and early 90s. It was known for its versatility and extensive library of games and software.</p>
+            <p>Features:</p>
+            <ul>
+                <li>64 KB of RAM</li>
+                <li>8-bit CPU</li>
+                <li>Integrated sound and graphics</li>
+            </ul>
         </div>
+
+        <!-- IBM PC Section -->
+        <div class="section">
+            <h2>IBM PC</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/IBM_5150.jpg" alt="IBM PC">
+            <p>The IBM Personal Computer, or IBM PC, debuted in 1981 and was a significant milestone in computing history. It set the standard for PC architecture and inspired a multitude of clones.</p>
+            <p>Features:</p>
+            <ul>
+                <li>8088 CPU</li>
+                <li>64 KB of RAM (expandable)</li>
+                <li>MS-DOS operating system</li>
+            </ul>
+        </div>
+
+        <!-- PlayStation 1 Section -->
+        <div class="section">
+            <h2>PlayStation 1</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/PlayStation_One.jpg" alt="PlayStation 1">
+            <p>Released in 1994, the PlayStation 1 was Sony’s first entry into the gaming console market. It revolutionized gaming with its CD-based games and 3D graphics capabilities.</p>
+            <p>Features:</p>
+            <ul>
+                <li>32-bit CPU</li>
+                <li>CD-ROM drive</li>
+                <li>Iconic game titles like "Final Fantasy VII" and "Metal Gear Solid"</li>
+            </ul>
+        </div>
+
+        <!-- Windows 98 Section -->
+        <div class="section">
+            <h2>Windows 98</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Windows_98.png" alt="Windows 98">
+            <p>Windows 98 was a major release of the Microsoft Windows operating system, launched in 1998. It introduced several new features and improvements over its predecessor, Windows 95.</p>
+            <p>Features:</p>
+            <ul>
+                <li>Improved Plug and Play support</li>
+                <li>Internet Explorer 4.0</li>
+                <li>Windows Desktop Update</li>
+            </ul>
+        </div>
+
+        <!-- Tamagotchi Section -->
+        <div class="section">
+            <h2>Tamagotchi</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tamagotchisp.png/800px-Tamagotchisp.png" alt="Tamagotchi">
+            <p>The Tamagotchi was a digital pet that became a global phenomenon in the late 90s. You needed to feed it, play with it, and clean up after it to keep it happy.</p>
+            <p>Features:</p>
+            <ul>
+                <li>Simple pixel display</li>
+                <li>Interactive care-taking</li>
+                <li>Multiple versions and designs</li>
+            </ul>
+        </div>
+
+        <!-- Game Boy Section -->
+        <div class="section">
+            <h2>Game Boy</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gameboy.JPG/800px-Gameboy.JPG" alt="Game Boy">
+            <p>Released in 1989, the Game Boy was Nintendo’s handheld gaming console that brought gaming on-the-go to a new level. It was known for its long battery life and iconic games.</p>
+            <p>Features:</p>
+            <ul>
+                <li>8-bit CPU</li>
+                <li>Monochrome LCD screen</li>
+                <li>Popular games like "Tetris" and "Pokémon"</li>
+            </ul>
+        </div>
+
+        <p class="blink">Blinking Text!</p>
+        <hr>
+        <footer>
+            <p>Made with 💖 in the 90s</p>
+        </footer>
     </div>
 
     <script>
-        function showContent(type) {
-            document.querySelectorAll('.hidden-content').forEach(el => el.style.display = 'none');
-            document.getElementById(type).style.display = 'block';
-        }
+        // Initialize visitor count from local storage or start from 0
+        let count = localStorage.getItem('visitorCount') || 0;
+        count++;
+        localStorage.setItem('visitorCount', count);
 
-        function toggleCatMode() {
-            document.body.classList.toggle('cat-mode');
-        }
+        // Update the counter display
+        document.getElementById('visitorCount').textContent = count;
     </script>
 </body>
 </html>
