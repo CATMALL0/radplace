@@ -92,7 +92,22 @@
             <li>Internet on every device</li>
         </ul>
 
-        <p>Blinking Text!</p>
+        <!-- Stock Market Game Section -->
+        <h2 style="font-size: 20px; color: #FF00FF;">Stock Market Simulator</h2>
+        <p>Start with $30 and try to make the most money in 30 days. You can buy, sell, or wait each day.</p>
+        
+        <div id="game">
+            <p>Current Money: $<span id="money">30</span></p>
+            <p>Stock Price: $<span id="stockPrice">10</span></p>
+            <p>Days Remaining: <span id="daysRemaining">30</span></p>
+            <p>Your Stocks: <span id="stocks">0</span></p>
+            <p>Daily Actions:</p>
+            <button onclick="buyStock()">Buy Stock</button>
+            <button onclick="sellStock()">Sell Stock</button>
+            <button onclick="wait()">Wait</button>
+            <p id="actionMessage"></p>
+        </div>
+
         <hr style="border: 1px solid #FFFFFF;">
         <footer>
             <p>Made with 💖 in the 90s</p>
@@ -100,13 +115,59 @@
     </center>
 
     <script>
-        // Initialize visitor count from local storage or start from 0
-        let count = localStorage.getItem('visitorCount') || 0;
-        count++;
-        localStorage.setItem('visitorCount', count);
+        let money = 30;
+        let stockPrice = 10;
+        let stocks = 0;
+        let daysRemaining = 30;
 
-        // Update the counter display
-        document.getElementById('visitorCount').textContent = count;
+        function updateUI() {
+            document.getElementById('money').textContent = money.toFixed(2);
+            document.getElementById('stockPrice').textContent = stockPrice.toFixed(2);
+            document.getElementById('stocks').textContent = stocks;
+            document.getElementById('daysRemaining').textContent = daysRemaining;
+        }
+
+        function updateStockPrice() {
+            // Simple random change in stock price
+            stockPrice = (Math.random() * 20 + 5).toFixed(2);
+            updateUI();
+        }
+
+        function buyStock() {
+            if (money >= stockPrice) {
+                stocks++;
+                money -= stockPrice;
+                document.getElementById('actionMessage').textContent = `Bought 1 stock for $${stockPrice}`;
+            } else {
+                document.getElementById('actionMessage').textContent = 'Not enough money to buy stock.';
+            }
+            updateUI();
+        }
+
+        function sellStock() {
+            if (stocks > 0) {
+                money += stockPrice;
+                stocks--;
+                document.getElementById('actionMessage').textContent = `Sold 1 stock for $${stockPrice}`;
+            } else {
+                document.getElementById('actionMessage').textContent = 'No stocks to sell.';
+            }
+            updateUI();
+        }
+
+        function wait() {
+            if (daysRemaining > 0) {
+                daysRemaining--;
+                updateStockPrice();
+                document.getElementById('actionMessage').textContent = 'Waited a day. Stock price updated.';
+            } else {
+                document.getElementById('actionMessage').textContent = 'Game over!';
+                document.getElementById('game').innerHTML += `<p>Final Money: $${money.toFixed(2)}</p>`;
+            }
+            updateUI();
+        }
+
+        updateUI();
     </script>
 </body>
 </html>
