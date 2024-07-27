@@ -4,196 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My 90s Page!</title>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            color: #000;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #ff00ff;
-            font-size: 3em;
-            text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff00ff; /* 3D text effect */
-            margin-top: 20px;
-        }
-        h2 {
-            color: #00ff00;
-            font-size: 2.5em;
-            margin-top: 20px;
-            text-shadow: 1px 1px 0 #000;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            background-color: #e0e0e0;
-            padding: 20px;
-            border: 3px solid #ff00ff;
-            border-radius: 10px;
-            box-shadow: 3px 3px 5px #888888;
-            margin-top: 20px;
-        }
-        .section {
-            margin: 20px 0;
-            padding: 10px;
-            border: 2px solid #0000ff;
-            border-radius: 5px;
-            background-color: #ffffff;
-        }
-        a {
-            color: #0000ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #ff0000;
-        }
-        marquee {
-            color: #ff00ff;
-            font-size: 1.8em;
-            margin: 20px 0;
-            display: block;
-            background: #e0e0e0;
-            padding: 10px;
-        }
-        img {
-            width: 250px;
-            height: auto;
-            border: 2px solid #ff00ff;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        hr {
-            border: 0;
-            height: 2px;
-            background: #ff00ff;
-            margin: 20px 0;
-        }
-        .visitor-counter {
-            font-size: 1.2em;
-            margin: 20px 0;
-            color: #ff0000;
-        }
-        .blink {
-            animation: blink 1s step-start infinite;
-        }
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
+    <center>
         <h1>Welcome to My Totally Rad 90s Page!</h1>
-        
+
         <marquee>Welcome to the most awesome 90s website!</marquee>
 
-        <div class="visitor-counter">
-            <p>Visitor Count: <span id="visitorCount">0</span></p>
-        </div>
+        <p>Visitor Count: <span id="visitorCount">0</span></p>
 
         <p>This page is a tribute to some of the most awesome tech from the 1990s and predictions for the 2000s. Check out these amazing pieces of technology:</p>
 
         <!-- Commodore 64 Section -->
-        <div class="section">
-            <h2>Commodore 64</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Commodore_64.jpg" alt="Commodore 64">
-            <p>The Commodore 64, released in 1982, was one of the most popular home computers of the 1980s and early 90s.</p>
-            <p>Features:</p>
-            <ul>
-                <li>64 KB of RAM</li>
-                <li>8-bit CPU</li>
-                <li>Integrated sound and graphics</li>
-            </ul>
-        </div>
+        <hr>
+        <h2>Commodore 64</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Commodore_64.jpg" alt="Commodore 64" width="300">
+        <p>The Commodore 64, released in 1982, was one of the most popular home computers of the 1980s and early 90s.</p>
+        <ul>
+            <li>64 KB of RAM</li>
+            <li>8-bit CPU</li>
+            <li>Integrated sound and graphics</li>
+        </ul>
+        <hr>
 
         <!-- IBM PC Section -->
-        <div class="section">
-            <h2>IBM PC</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/IBM_5150.jpg" alt="IBM PC">
-            <p>The IBM Personal Computer, or IBM PC, debuted in 1981 and set the standard for PC architecture.</p>
-            <p>Features:</p>
-            <ul>
-                <li>8088 CPU</li>
-                <li>64 KB of RAM</li>
-                <li>MS-DOS operating system</li>
-            </ul>
-        </div>
+        <h2>IBM PC</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/IBM_5150.jpg" alt="IBM PC" width="300">
+        <p>The IBM Personal Computer, or IBM PC, debuted in 1981 and set the standard for PC architecture.</p>
+        <ul>
+            <li>8088 CPU</li>
+            <li>64 KB of RAM</li>
+            <li>MS-DOS operating system</li>
+        </ul>
+        <hr>
 
         <!-- PlayStation 1 Section -->
-        <div class="section">
-            <h2>PlayStation 1</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/PlayStation_One.jpg" alt="PlayStation 1">
-            <p>Released in 1994, the PlayStation 1 was Sony’s first gaming console that revolutionized gaming.</p>
-            <p>Features:</p>
-            <ul>
-                <li>32-bit CPU</li>
-                <li>CD-ROM drive</li>
-                <li>Iconic game titles</li>
-            </ul>
-        </div>
+        <h2>PlayStation 1</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/PlayStation_One.jpg" alt="PlayStation 1" width="300">
+        <p>Released in 1994, the PlayStation 1 was Sony’s first gaming console that revolutionized gaming.</p>
+        <ul>
+            <li>32-bit CPU</li>
+            <li>CD-ROM drive</li>
+            <li>Iconic game titles</li>
+        </ul>
+        <hr>
 
         <!-- Windows 98 Section -->
-        <div class="section">
-            <h2>Windows 98</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Windows_98.png" alt="Windows 98">
-            <p>Windows 98 introduced several new features and improvements over Windows 95.</p>
-            <p>Features:</p>
-            <ul>
-                <li>Improved Plug and Play support</li>
-                <li>Internet Explorer 4.0</li>
-                <li>Windows Desktop Update</li>
-            </ul>
-        </div>
+        <h2>Windows 98</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Windows_98.png" alt="Windows 98" width="300">
+        <p>Windows 98 introduced several new features and improvements over Windows 95.</p>
+        <ul>
+            <li>Improved Plug and Play support</li>
+            <li>Internet Explorer 4.0</li>
+            <li>Windows Desktop Update</li>
+        </ul>
+        <hr>
 
         <!-- Tamagotchi Section -->
-        <div class="section">
-            <h2>Tamagotchi</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tamagotchisp.png/800px-Tamagotchisp.png" alt="Tamagotchi">
-            <p>The Tamagotchi was a digital pet that became a global phenomenon in the late 90s.</p>
-            <p>Features:</p>
-            <ul>
-                <li>Simple pixel display</li>
-                <li>Interactive care-taking</li>
-            </ul>
-        </div>
+        <h2>Tamagotchi</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tamagotchisp.png/800px-Tamagotchisp.png" alt="Tamagotchi" width="300">
+        <p>The Tamagotchi was a digital pet that became a global phenomenon in the late 90s.</p>
+        <ul>
+            <li>Simple pixel display</li>
+            <li>Interactive care-taking</li>
+        </ul>
+        <hr>
 
         <!-- Game Boy Section -->
-        <div class="section">
-            <h2>Game Boy</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gameboy.JPG/800px-Gameboy.JPG" alt="Game Boy">
-            <p>The Game Boy was Nintendo’s handheld gaming console, known for its long battery life and iconic games.</p>
-            <p>Features:</p>
-            <ul>
-                <li>8-bit CPU</li>
-                <li>Monochrome LCD screen</li>
-                <li>Popular games like "Tetris"</li>
-            </ul>
-        </div>
+        <h2>Game Boy</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gameboy.JPG/800px-Gameboy.JPG" alt="Game Boy" width="300">
+        <p>The Game Boy was Nintendo’s handheld gaming console, known for its long battery life and iconic games.</p>
+        <ul>
+            <li>8-bit CPU</li>
+            <li>Monochrome LCD screen</li>
+            <li>Popular games like "Tetris"</li>
+        </ul>
+        <hr>
 
         <!-- Predictions for the 2000s Section -->
-        <div class="section">
-            <h2>Predictions for the 2000s</h2>
-            <p>Here's what people thought technology would look like in the 2000s:</p>
-            <ul>
-                <li>Flying cars</li>
-                <li>Robots in every home</li>
-                <li>Advanced virtual reality</li>
-                <li>Internet on every device</li>
-            </ul>
-        </div>
+        <h2>Predictions for the 2000s</h2>
+        <p>Here's what people thought technology would look like in the 2000s:</p>
+        <ul>
+            <li>Flying cars</li>
+            <li>Robots in every home</li>
+            <li>Advanced virtual reality</li>
+            <li>Internet on every device</li>
+        </ul>
 
-        <p class="blink">Blinking Text!</p>
+        <p>Blinking Text!</p>
         <hr>
         <footer>
             <p>Made with 💖 in the 90s</p>
         </footer>
-    </div>
+    </center>
 
     <script>
         // Initialize visitor count from local storage or start from 0
