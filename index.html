@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Webpage</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #00FFFF; /* Cyan background */
+            color: #000000; /* Black text */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('https://www.pexels.com/photo/multicolored-abstract-painting-606972/');
+            background-size: cover;
+        }
+        h1 {
+            color: #FF00FF; /* Magenta text */
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px #FF00FF;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        .content {
+            background-color: #FFFFFF; /* White background for content */
+            border: 2px solid #0000FF; /* Blue border */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px #FF00FF;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a {
+            color: #0000FF;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #FF0000;
+            text-decoration: none;
+        }
+        .hidden-content {
+            display: none;
+        }
+        .hidden-content img {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #FF00FF;
+            border-radius: 10px;
+        }
+        .hidden-content video {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #FF00FF;
+            border-radius: 10px;
+        }
+        .cat-mode {
+            background-color: #FFC0CB; /* Light pink background */
+            color: #000000; /* Black text */
+        }
+        .cat-mode h1 {
+            color: #FF4500; /* Orange-red text */
+        }
+        .cat-mode a {
+            color: #FF69B4; /* Hot pink links */
+        }
+        .cat-mode .content {
+            background-color: #FFFFFF; /* White background for content */
+            box-shadow: 5px 5px 10px #FF4500;
+        }
+        .cat-mode .hidden-content img,
+        .cat-mode .hidden-content video {
+            border-color: #FF4500; /* Orange-red border */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to My Retro Webpage</h1>
+        <p>Hello, my name is <strong>[LOLguy89]</strong>. I am a [Your Title/Profession].</p>
+        <p>Click on the following secret links to discover hidden content:</p>
+        <ul>
+            <li><a href="#" onclick="showContent('photo')">Secret Photo</a></li>
+            <li><a href="#" onclick="showContent('gif')">Secret GIF</a></li>
+            <li><a href="#" onclick="toggleCatMode()">Toggle Cat Mode</a></li>
+        </ul>
+
+        <!-- Hidden Content -->
+        <div id="photo" class="hidden-content">
+            <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Secret Photo">
+        </div>
+        <div id="gif" class="hidden-content">
+            <img src="https://media.giphy.com/media/3o7TKY9mB2U4NTb2NO/giphy.gif" alt="Secret GIF">
+        </div>
+    </div>
+
+    <script>
+        function showContent(type) {
+            document.querySelectorAll('.hidden-content').forEach(el => el.style.display = 'none');
+            document.getElementById(type).style.display = 'block';
+        }
+
+        function toggleCatMode() {
+            document.body.classList.toggle('cat-mode');
+        }
+    </script>
+</body>
+</html>
